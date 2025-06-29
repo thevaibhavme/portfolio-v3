@@ -21,7 +21,7 @@ export default function Bio() {
                             style={{ borderRadius: "50%" }}
                         />
                         <div className={styles.profileInfo}>
-                            <div className={styles.name}>Vaibhav Aggarwal</div>
+                            <div className={styles.name}>Vaibhav</div>
                             <div className={styles.title}>Keep Building Things</div>
                         </div>
                     </div>
