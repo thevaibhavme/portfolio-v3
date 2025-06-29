@@ -38,8 +38,8 @@ export default function Lab() {
                             quality={100}
                             priority={false}
                             loading='lazy'
-                            placeholder="blur"
-                            blurDataURL="..."
+                            // placeholder="blur"
+                            // blurDataURL="..."
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                             src={src}
                             alt="labimages"
