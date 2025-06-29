@@ -36,16 +36,11 @@ export default function Lab() {
                             width={2400}
                             height={1260}
                             quality={100}
-                            priority={false}
-                            loading='lazy'
-                            // placeholder="blur"
-                            // blurDataURL="..."
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                             src={src}
                             alt="labimages"
                             className={styles.images}
                             style={{
-                                objectFit: "cover",
                                 width: "100%",
                                 height: "auto",
                             }}
