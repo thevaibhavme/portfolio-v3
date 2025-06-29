@@ -1,0 +1,106 @@
+.blogsContainer {
+    display: flex;
+    width: 600px;
+    padding: 80px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.headerContainer {
+    display: flex;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    color: var(--text-primary);
+    font-family: Figtree;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: 32px;
+    letter-spacing: -0.384px;
+}
+
+.heading {
+    animation: blogCardAnimation 1s ease-out forwards;
+    opacity: 0;
+}
+
+.blogsList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.blogListItem {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+    border-radius: 16px;
+    animation: blogCardAnimation 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: calc(var(--index) * 0.1s);
+}
+
+.blogListItem:hover {
+    background-color: var(--bg-secondary);
+}
+
+.blogTitle {
+    align-self: stretch;
+    color: var(--text-primary);
+    font-family: Figtree;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 510;
+    line-height: 27px;
+}
+
+.blogDate {
+    color: var(--text-tertiary);
+    font-family: Figtree;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@keyframes blogCardAnimation {
+    0% {
+        opacity: 0;
+        scale: 1.01;
+        filter: blur(16px);
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+        filter: blur(0px);
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .blogsContainer {
+        width: 100%;
+    }
+    .blogListItem:hover {
+        background: unset;
+    }
+    .headerContainer {
+        padding: 0px;
+    }
+    .blogListItem{
+        padding: 16px 0px;
+    }
+}

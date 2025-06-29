@@ -1,0 +1,66 @@
+.mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logosContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px 10px 10px;
+    gap: 40px;
+    animation: logoAnimation 12s linear infinite;
+}
+
+.logoWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.logoListItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.logo {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.mainContainer .leftGradient {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    background: linear-gradient(270deg, var(--bg-primary-alpha-0) 0%, var(--bg-primary) 100%);
+    top: 0;
+    left: 0;
+    z-index: 20000;
+}
+
+.mainContainer .rightGradient {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    background: linear-gradient(270deg, var(--bg-primary) 0%, var(--bg-primary-alpha-0) 100%);
+    top: 0;
+    right: 0;
+    z-index: 20000;
+}

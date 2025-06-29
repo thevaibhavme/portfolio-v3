@@ -1,0 +1,85 @@
+:root {
+
+    /* bg colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #F5F5F5;
+    --bg-tertiary: #EBEBEB;
+
+    /* bg-alpha colors */
+    --bg-primary-alpha-0: rgba(255, 255, 255, 0);
+
+    /* bg-invert colors */
+    --bg-invert-primary: #161616;
+
+    /* text colors */
+    --text-primary: #171717;
+    --text-secondary: #2E2E2E;
+    --text-tertiary: #7A7A7A;
+
+    /* text-invert colors */
+    --text-invert-primary: #F7F7F7;
+
+    /* static colors */
+    --static-black: #161616;
+    --static-white: #FFFFFF;
+
+    /* accent colors */
+    --red: #FF3B30;
+    --orange: #FF9500;
+    --yellow: #FFCC00;
+    --green: #34C759;
+    --mint: #00C7BE;
+    --teal: #30B0C7;
+    --cyan: #32ADE6;
+    --blue: #007AFF;
+    --indigo: #5856D6;
+    --purple: #AF52DE;
+    --pink: #FF2D55;
+    --brown: #A2845E;
+
+    /* border colors */
+    --border-primary: #D9D9D9;
+}
+
+[data-theme='dark'] {
+
+    /* bg colors */
+    --bg-primary: #161616;
+    --bg-secondary: #212121;
+    --bg-tertiary: #2B2B2B;
+
+    /* bg-alpha colors */
+    --bg-primary-alpha-0: #16161600;
+
+    /* bg-invert colors */
+    --bg-invert-primary: #FFFFFF;
+
+    /* text colors */
+    --text-primary: #F7F7F7;
+    --text-secondary: #C7C7C7;
+    --text-tertiary: #ABABAB;
+
+    /* text-invert colors */
+    --text-invert-primary: #171717;
+
+    /* static colors */
+    --static-black: #161616;
+    --static-white: #FFFFFF;
+
+    /* accent colors */
+    --red: #FF453A;
+    --orange: #FF9F0A;
+    --yellow: #FFD60A;
+    --green: #30D158;
+    --mint: #63E6E2;
+    --teal: #40CBE0;
+    --cyan: #64D2FF;
+    --blue: #0A84FF;
+    --indigo: #5E5CE6;
+    --purple: #BF5AF2;
+    --pink: #FF375F;
+    --brown: #AC8E68;
+
+    /* border colors */
+    --border-primary: #404040;
+}
