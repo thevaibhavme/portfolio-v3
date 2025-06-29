@@ -37,7 +37,7 @@ export default function Lab() {
                             height={1260}
                             quality={100}
                             priority={false}
-                            loading="eager"
+                            loading='lazy'
                             placeholder="blur"
                             blurDataURL="..."
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
