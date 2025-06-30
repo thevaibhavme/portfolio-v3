@@ -51,7 +51,7 @@ export default function Lab() {
                             loading='lazy'
                             draggable={false}
                             placeholder="blur"
-                            blurDataURL="..."
+                            blurDataURL="L6O{~=00^+-V00-pM{WF00~qRjM_"
                         />
                     </div>
                 ))}

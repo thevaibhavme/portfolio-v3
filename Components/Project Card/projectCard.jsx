@@ -31,7 +31,7 @@ export function ProjectCard({
                 }}
                 draggable={false}
                 placeholder="blur"
-                blurDataURL="..."
+                blurDataURL="L6O{~=00^+-V00-pM{WF00~qRjM_"
                 className={styles.projectThumbnail} />
             <div className={styles.projectInfoContainer}>
                 <div className={styles.projectTitle}>{title}</div>
