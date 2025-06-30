@@ -41,7 +41,6 @@ export default function Lab() {
                             width={2400}
                             height={1260}
                             quality={100}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                             src={src}
                             alt="labimages"
                             className={styles.images}
@@ -49,6 +48,10 @@ export default function Lab() {
                                 width: "100%",
                                 height: "auto",
                             }}
+                            loading='lazy'
+                            draggable={false}
+                            placeholder="blur"
+                            blurDataURL="..."
                         />
                     </div>
                 ))}
