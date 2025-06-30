@@ -24,11 +24,14 @@ export function ProjectCard({
                 height={1920}
                 alt="project-title"
                 quality={100}
+                loading="lazy"
                 style={{
                     width: "100%",
                     height: "auto",
                 }}
                 draggable={false}
+                placeholder="blur"
+                blurDataURL="..."
                 className={styles.projectThumbnail} />
             <div className={styles.projectInfoContainer}>
                 <div className={styles.projectTitle}>{title}</div>
