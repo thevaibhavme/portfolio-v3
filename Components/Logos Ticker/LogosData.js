@@ -1,19 +1,19 @@
 const logosData = [
     {
         name: "MakeMyTrip",
-        url: "./logos/makemytrip.svg",
+        url: "./companyLogos/makemytrip.svg",
     },
     {
         name: "Scaler",
-        url: "./logos/scaler.svg",
+        url: "./companyLogos/scaler.svg",
     },
     {
         name: "redBus",
-        url: "./logos/redBus.svg",
+        url: "./companyLogos/redBus.svg",
     },
     {
         name: "Attentive",
-        url: "./logos/attentive.svg",
+        url: "./companyLogos/attentive.svg",
     },
 ]
 

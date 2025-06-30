@@ -1,3 +1,4 @@
+// "use client";
 import { Navbar } from "@/Components/Navbar/navbar"
 import styles from "./bio.module.css"
 import Image from "next/image"
@@ -6,22 +7,38 @@ import { ExperienceData } from "../../Components/Experience/experienceData"
 import Link from "next/link"
 import LogosTicker from "@/Components/Logos Ticker/logosTicker"
 import { EndingNote } from "@/Components/Blogs/blogsComps"
+import { Hyperlink } from "@/Components/Link/hyperlink"
+import Head from "next/head"
+// import { useEffect } from "react";
+
+export const metadata = {
+    title: "thevaibhav's bio",
+}
 
 export default function Bio() {
+
+    // useEffect(() => {
+    //     document.title = "thevaibhav's lab";
+    // }, [])
+
+
     return (
         <>
+            <Head>
+                <title>About — My Site</title>
+            </Head>
             <div className={styles.bioContainer}>
                 <div className={styles.headerContainer}>
                     <div className={styles.profileContainer}>
                         <Image
-                            src="/check.png"
+                            src="/profilephoto/profilephoto.png"
                             width={56}
                             height={56}
-                            alt="profileimage"
+                            alt="profilephoto"
                             style={{ borderRadius: "50%" }}
                         />
                         <div className={styles.profileInfo}>
-                            <div className={styles.name}>Aggarwal</div>
+                            <div className={styles.name}>Vaibhav Aggarwal</div>
                             <div className={styles.title}>Keep Building Things</div>
                         </div>
                     </div>
@@ -29,7 +46,7 @@ export default function Bio() {
                 <div className={styles.aboutContainer}>
                     <div className={styles.sectionTitle}>About</div>
                     <div className={styles.sectionDescription}>Hello, I’m Vaibhav. I’m a designer living in Bengaluru, India.
-                        Over the last 3 years, I have been experimenting around various domains of design be it interaction design, motion design and most recently visual design. You can check out my experiments <Link target="_blank" href="https://x.com/thevaibhavme" className={styles.emphasis}>here</Link>. I am driven by curiosity and chase high level of craftsmanship and excellence in my work.
+                        Over the last 3 years, I have been experimenting around various domains of design be it interaction design, motion design and most recently visual design. You can check out my experiments <Hyperlink newTab={true} src="https://x.com/thevaibhavme">here</Hyperlink>. I am driven by curiosity and chase high level of craftsmanship and excellence in my work.
                         <br />
                         <br />
                         Currently, I'm working as a designer at Newton School and do experiments in my free time.</div>
@@ -60,7 +77,7 @@ export default function Bio() {
                         <li>Beyond survival, money doesn’t make me happy, great work does.</li>
                     </ul>
                     <div className={styles.beliefsEnding}>
-                        It may happen (most likely) what I believe today, I may not believe that tomorrow. If you resonate with my believes, drop a  <Link href="https://x.com/thevaibhavme" target="blank" className={styles.emphasis}>hello</Link>.
+                        It may happen (most likely) what I believe today, I may not believe that tomorrow. If you resonate with my believes, drop a  <Hyperlink src="https://x.com/thevaibhavme" newTab={true}>hello</Hyperlink>.
                     </div>
                 </div>
                 <div className={styles.contactContainer}>
@@ -94,9 +111,9 @@ export default function Bio() {
                             </svg>
                         </Link>
                     </div>
-                    <div className={styles.contactEnding}>If you’re in Bengaluru, then let’s catchup in person. Just drop a <Link href="https://x.com/thevaibhavme" target="blank" className={styles.emphasis}>hello</Link>.</div>
+                    <div className={styles.contactEnding}>If you’re in Bengaluru, then let’s catchup in person. Just drop a <Hyperlink src="https://x.com/thevaibhavme" newTab={true}>hello</Hyperlink>.</div>
                 </div>
-                <EndingNote/>
+                <EndingNote />
             </div>
         </>
     )

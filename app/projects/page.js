@@ -2,6 +2,10 @@ import styles from "./projects.module.css"
 import { ProjectCard } from "@/Components/Project Card/projectCard";
 import { ProjectData } from "./projectData";
 
+export const metadata = {
+    title: "thevaibhav's projects",
+  }
+
 export default function Projects() {
     return (
         <>
@@ -21,7 +25,7 @@ export default function Projects() {
                     {ProjectData.map((project, index) => (
                         <ProjectCard
                             key={index}
-                            src={project.src}
+                            imageSRC={project.imageSRC}
                             title={project.title}
                             employer={project.employer}
                             year={project.year}

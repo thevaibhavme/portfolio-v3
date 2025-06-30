@@ -2,6 +2,10 @@ import Link from "next/link";
 import styles from "./blogs.module.css";
 import { BlogsData } from "../../Components/Blogs/blogsData";
 
+export const metadata = {
+    title: "thevaibhav's blogs",
+}
+
 export default function Blogs() {
     return (
         <>

@@ -2,8 +2,13 @@
 import styles from './lab.module.css'
 import Masonry from 'react-masonry-css'
 import Image from 'next/image'
+import { useEffect } from 'react';
 
 export default function Lab() {
+
+    useEffect(() => {
+        document.title = "thevaibhav's lab";
+    }, [])
 
     const images = [
         '/blue.png',

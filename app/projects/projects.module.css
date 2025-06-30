@@ -55,8 +55,8 @@
 
 .projectCard {
     opacity: 0;
-    animation: projectCardAnimation 1.6s ease-out forwards;
-    animation-delay: calc(var(--index) * 0.4s);
+    animation: projectCardAnimation 1.2s ease-out forwards;
+    animation-delay: calc(var(--index) * 0.5s);
 }
 
 @keyframes projectCardAnimation {
@@ -64,7 +64,7 @@
         opacity: 0;
         scale: 1.01;
         filter: blur(16px);
-        transform: translateY(20px);
+        transform: translateY(16px);
     }
 
     100% {

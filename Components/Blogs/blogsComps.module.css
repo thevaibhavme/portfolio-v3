@@ -108,7 +108,7 @@
 
 .endingNoteContainer {
     display: flex;
-    padding: 64px 0px 0px 0px;
+    /* padding: 64px 0px 0px 0px; */
     justify-content: center;
     align-items: center;
     gap: 8px;

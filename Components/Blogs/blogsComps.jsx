@@ -69,9 +69,9 @@ export function BlogSubHeading({ children }) {
     )
 }
 
-export function EndingNote() {
+export function EndingNote({style}) {
     return (
-        <div className={styles.endingNoteContainer}>
+        <div className={styles.endingNoteContainer} style={style}>
             <div className={styles.endingNote}>
                 "Keep Building Things"
             </div>

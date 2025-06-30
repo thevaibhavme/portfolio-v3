@@ -43,7 +43,7 @@ export default function TestBlog() {
                 <BlogParagraph>Thank you very very much Go-MMT Design for offering me a seat at the table.</BlogParagraph>
                 <BlogParagraph>If you want to know more about my experience of working with Go-MMT group or need to reach me, feel free to connect on X/Twitter at @realvaibhava. I love to give back to the community.</BlogParagraph>
                 {/* <BlogParagraph>stay hungry stay foolish</BlogParagraph> */}
-                <EndingNote/>
+                <EndingNote style={{ paddingTop: "80px" }}/>
             </BlogParentContainer>
         </>
     )
