@@ -25,7 +25,7 @@
   overflow: hidden;
   display: flex;
   position: relative;
-  animation: backdropFilterAnimation 1s ease-out forwards;
+  animation: backdropFilterAnimation 0.5s ease-out forwards;
 }
 
 /* @keyframes labCardAnimation {
@@ -48,12 +48,12 @@
   height: 100%;
   background-color: rgba(255, 255, 0, 0.01);
   /* backdrop-filter: blur(32px); */
-  animation: backdropFilterAnimation 1s ease-out forwards;
+  animation: backdropFilterAnimation 0.2s ease-out forwards;
 }
 
 @keyframes backdropFilterAnimation{
   0%{
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(2px);
   }
   100%{
     backdrop-filter: blur(0px);

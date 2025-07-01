@@ -38,8 +38,8 @@ export default function Lab() {
                     <div key={i} className={styles.item}>
                         <div className={styles.blurOverlay} />
                         <Image
-                            width={2400}
-                            height={1260}
+                            width={2560}
+                            height={1920}
                             quality={100}
                             src={src}
                             alt="labimages"
@@ -51,7 +51,8 @@ export default function Lab() {
                             loading='lazy'
                             draggable={false}
                             placeholder="blur"
-                            blurDataURL="L6O{~=00^+-V00-pM{WF00~qRjM_"
+                            blurDataURL="..."
+                            sizes="(max-width: 720px) 100vw, (max-width: 1200px) 100vw"
                         />
                     </div>
                 ))}

@@ -24,16 +24,19 @@ export function BlogImage({ source }) {
         <div className={styles.blogImageContainer}>
             <Image
                 src={source}
-                width={672}
-                height={500}
+                width={2560}
+                height={1920}
                 alt="project-title"
+                quality={100}
+                loading="lazy"
                 style={{
-                    boxSizing: "border-box",
-                    maxWidth: "100%",
-                    minWidth: "100%",
+                    width: "100%",
                     height: "auto",
                     borderRadius: "16px",
                 }}
+                placeholder="blur"
+                blurDataURL="..."
+                sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw"
             />
         </div>
     )
@@ -69,7 +72,7 @@ export function BlogSubHeading({ children }) {
     )
 }
 
-export function EndingNote({style}) {
+export function EndingNote({ style }) {
     return (
         <div className={styles.endingNoteContainer} style={style}>
             <div className={styles.endingNote}>

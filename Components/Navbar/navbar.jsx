@@ -52,7 +52,7 @@ export function Navbar() {
                 <motion.div
                     initial={{ opacity: 0, y: "90%" }}
                     animate={{ opacity: 1, y: "0" }}
-                    transition={{ type: "spring", duration: 0.8, bounce: 0.6 }}
+                    transition={{ type: "spring", duration: 0.8, bounce: 0.5 }}
                     className={styles.navbarContainer}
                 >
                     <Link href="/" className={`${styles.navbarLink} ${pathname === '/' ? styles.active : ''} `}>Home</Link>
