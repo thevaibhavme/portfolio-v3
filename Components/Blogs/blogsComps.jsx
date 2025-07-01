@@ -24,8 +24,8 @@ export function BlogImage({ source }) {
         <div className={styles.blogImageContainer}>
             <Image
                 src={source}
-                width={2560}
-                height={1920}
+                width={2400}
+                height={1260}
                 alt="project-title"
                 quality={100}
                 loading="lazy"
