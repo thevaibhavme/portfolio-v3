@@ -1,5 +1,3 @@
-// "use client";
-import { ThemeProvider } from "next-themes";
 import styles from "./labCard.module.css"
 import Image from "next/image";
 
@@ -22,7 +20,7 @@ export function LabCard({
                     src={src}
                     alt={title || "lab image"}
                     width={2560}
-                    height={1920}
+                    height={2560}
                     className={styles.images}
                     style={{
                         width: "100%",

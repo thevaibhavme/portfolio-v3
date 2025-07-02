@@ -13,8 +13,8 @@ export function ProjectCard({
 }) {
     return (
         <Link
-            href="/blogs/mmtpp"
-            target="_blank"
+            href="/blogs/mmtinternship"
+            // target="_blank"
             className={`${styles.projectParentContainer} ${className}`}
             style={style}
         >

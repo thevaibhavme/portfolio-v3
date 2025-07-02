@@ -1,11 +1,8 @@
 "use client";
 import styles from './lab.module.css'
 import Masonry from 'react-masonry-css'
-// import Image from 'next/image'
-// import { useEffect } from 'react';
 import { LabCard } from '@/Components/Lab/labCard';
 import { LabData } from '@/Components/Lab/labData';
-import Head from 'next/head';
 
 export default function Lab() {
 
@@ -29,9 +26,6 @@ export default function Lab() {
     return (
         <>
             <div className={styles.labParentContainer}>
-                <Head>
-                    <title>thevaibhav check</title>
-                </Head>
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
                     className={styles.my_masonry_grid}

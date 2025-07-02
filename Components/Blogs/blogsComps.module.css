@@ -78,6 +78,7 @@
     font-style: normal;
     font-weight: 590;
     line-height: 28px;
+    letter-spacing: -0.24px;
 }
 
 @media screen and (max-width: 720px) {

@@ -1,4 +1,3 @@
-// "use client";
 import { Navbar } from "@/Components/Navbar/navbar"
 import styles from "./bio.module.css"
 import Image from "next/image"
@@ -8,8 +7,6 @@ import Link from "next/link"
 import LogosTicker from "@/Components/Logos Ticker/logosTicker"
 import { EndingNote } from "@/Components/Blogs/blogsComps"
 import { Hyperlink } from "@/Components/Link/hyperlink"
-import Head from "next/head"
-// import { useEffect } from "react";
 
 export const metadata = {
     title: "thevaibhav's bio",
@@ -18,7 +15,7 @@ export const metadata = {
 export default function Bio() {
 
     // useEffect(() => {
-    //     document.title = "thevaibhav's lab";
+    //     document.title = "thevaibhav's bio";
     // }, [])
 
 
