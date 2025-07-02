@@ -24,9 +24,6 @@ export default function Bio() {
 
     return (
         <>
-            <Head>
-                <title>About — My Site</title>
-            </Head>
             <div className={styles.bioContainer}>
                 <div className={styles.headerContainer}>
                     <div className={styles.profileContainer}>
@@ -36,6 +33,11 @@ export default function Bio() {
                             height={56}
                             alt="profilephoto"
                             style={{ borderRadius: "50%" }}
+                            loading='lazy'
+                            draggable={false}
+                            placeholder="blur"
+                            blurDataURL="..."
+                            sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw"
                         />
                         <div className={styles.profileInfo}>
                             <div className={styles.name}>Vaibhav Aggarwal</div>

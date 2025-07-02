@@ -3,6 +3,11 @@
     font-family: Figtree;
     font-size: 17px;
     font-style: normal;
-    font-weight: 580;
+    font-weight: 590;
     line-height: 27px;
+    border-radius: 9999px;
+}
+
+.link{
+    border-radius: 9999px;
 }

@@ -1,0 +1,34 @@
+.labParentContainer {
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: inline-flex;
+    margin-bottom: 8px;
+}
+
+.labCardDetailsContainer {
+    display: flex;
+    width: 539px;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.labDetails {
+    color: var(--text-primary);
+    font-family: Figtree;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 510;
+    line-height: 24px;
+}
+
+.time {
+    color: var(--text-secondary);
+}

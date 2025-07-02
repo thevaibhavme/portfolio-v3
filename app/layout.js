@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { Figtree, Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css"
 import { ThemeProvider } from "next-themes";
@@ -14,6 +14,7 @@ const figtree = Figtree({
 //   title: "thevaibhav's home",
 //   icon
 // }
+
 
 export default function RootLayout({ children }) {
 

@@ -13,6 +13,10 @@ body::selection {
   color: var(--static-black);
 }
 
+body :focus-visible {
+  outline: 2px solid var(--blue);
+}
+
 body {
   color: var(--text-primary);
   background: var(--bg-primary);
