@@ -32,7 +32,7 @@ export function ProjectCard({
                 draggable={false}
                 placeholder="blur"
                 blurDataURL="..."
-                sizes="100vw"
+                // sizes="100vw"
                 className={styles.projectThumbnail} />
             <div className={styles.projectInfoContainer}>
                 <div className={styles.projectTitle}>{title}</div>
