@@ -22,7 +22,7 @@ export function ProjectCard({
                 src={imageSRC}
                 width={672}
                 height={504}
-                // quality={80}
+                quality={100}
                 alt="project-title"
                 loading="lazy"
                 style={{
