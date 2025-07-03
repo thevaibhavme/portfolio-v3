@@ -20,10 +20,9 @@ export function ProjectCard({
         >
             <Image
                 src={imageSRC}
-                width={2560}
-                height={1920}
+                width={3840}
+                height={2160}
                 alt="project-title"
-                quality={100}
                 loading="lazy"
                 style={{
                     width: "100%",
@@ -32,7 +31,7 @@ export function ProjectCard({
                 draggable={false}
                 placeholder="blur"
                 blurDataURL="..."
-                sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw"
+                sizes="100vw"
                 className={styles.projectThumbnail} />
             <div className={styles.projectInfoContainer}>
                 <div className={styles.projectTitle}>{title}</div>
