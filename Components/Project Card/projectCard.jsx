@@ -20,8 +20,8 @@ export function ProjectCard({
         >
             <Image
                 src={imageSRC}
-                width={3840}
-                height={2160}
+                width={672}
+                height={504}
                 alt="project-title"
                 loading="lazy"
                 style={{
