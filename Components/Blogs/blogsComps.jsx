@@ -24,8 +24,8 @@ export function BlogImage({ source }) {
         <div className={styles.blogImageContainer}>
             <Image
                 src={source}
-                width={3840}
-                height={2160}
+                width={672}
+                height={420}
                 alt="project-title"
                 quality={100}
                 loading="lazy"
@@ -36,7 +36,8 @@ export function BlogImage({ source }) {
                 }}
                 placeholder="blur"
                 blurDataURL="..."
-                sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw"
+                sizes="100vw"
+                draggable={false}
             />
         </div>
     )

@@ -19,8 +19,8 @@ export function LabCard({
                 <Image
                     src={src}
                     alt={title || "lab image"}
-                    width={2560}
-                    height={2560}
+                    width={332}
+                    height={265}
                     className={styles.images}
                     style={{
                         width: "100%",
@@ -40,6 +40,7 @@ export function LabCard({
                     autoPlay
                     style={{
                         width: '100%',
+                        height: "auto",
                         borderRadius: "8px",
                     }}
                 >

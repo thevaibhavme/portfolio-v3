@@ -34,7 +34,6 @@ export default function Bio() {
                             draggable={false}
                             placeholder="blur"
                             blurDataURL="..."
-                            sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw"
                         />
                         <div className={styles.profileInfo}>
                             <div className={styles.name}>Vaibhav Aggarwal</div>

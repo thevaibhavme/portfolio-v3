@@ -23,10 +23,10 @@
 .labDetails {
     color: var(--text-primary);
     font-family: Figtree;
-    font-size: 15px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 510;
-    line-height: 24px;
+    line-height: 21px;
 }
 
 .time {

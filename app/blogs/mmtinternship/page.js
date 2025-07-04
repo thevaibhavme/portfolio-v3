@@ -1,4 +1,4 @@
-import coverImage from "./images/coverImage.png";
+import coverImage from "./images/coverImage.webp";
 import { Hyperlink } from "@/Components/Link/hyperlink";
 import { BlogHeading, BlogParagraph, BlogParagraphEmphasis, BlogSubHeading, BlogImage, BlogParentContainer, EndingNote } from "@/Components/Blogs/blogsComps";
 
