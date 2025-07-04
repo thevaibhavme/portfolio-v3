@@ -1,3 +1,6 @@
+import ChatIcons from "@/labAssets/chaticons.png"
+// import Timeline from "@/labAssets/timeline.mp4"
+
 export const LabData = [
     {
         title: "Chat Visuals",
@@ -7,8 +10,9 @@ export const LabData = [
         CTAcopy: "Check Prototype",
         CTAredirectionURL: "/labs",
         type: "image",
-        src: "/chaticons.png",
+        src: ChatIcons,
         theme: "dark",
+        blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAAXNSR0IArs4c6QAAAIpJREFUGFc9zVsOgjAQheEzSEAEiYnpC7r/XbkKoKVz6Rhs4nn+cn5S/hRVIzMDs6LrOwgLzk3T4HSCGA/KLNjWhPs8Iu4JxR3vV6hgXSOJGlQUzaVBMQcREMKjgn0/SORMMK5Dj3zwL/EH25aIRZFixnCrwB1Ylmd9yFnIrEBV0bYtVA2AY55H/wLJ1GrtOr+q3AAAAABJRU5ErkJggg==",
     },
     {
         title: "Chat Visuals",
@@ -20,6 +24,7 @@ export const LabData = [
         type: "video",
         src: "/timeline.mp4",
         theme: "light",
+        blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAAXNSR0IArs4c6QAAAIpJREFUGFc9zVsOgjAQheEzSEAEiYnpC7r/XbkKoKVz6Rhs4nn+cn5S/hRVIzMDs6LrOwgLzk3T4HSCGA/KLNjWhPs8Iu4JxR3vV6hgXSOJGlQUzaVBMQcREMKjgn0/SORMMK5Dj3zwL/EH25aIRZFixnCrwB1Ylmd9yFnIrEBV0bYtVA2AY55H/wLJ1GrtOr+q3AAAAABJRU5ErkJggg==",
     },
     {
         title: "Chat Visuals",
@@ -29,8 +34,9 @@ export const LabData = [
         CTAcopy: "Check Prototype",
         CTAredirectionURL: "/labs",
         type: "image",
-        src: "/chaticons.png",
+        src: ChatIcons,
         theme: "dark",
+        blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAAXNSR0IArs4c6QAAAIpJREFUGFc9zVsOgjAQheEzSEAEiYnpC7r/XbkKoKVz6Rhs4nn+cn5S/hRVIzMDs6LrOwgLzk3T4HSCGA/KLNjWhPs8Iu4JxR3vV6hgXSOJGlQUzaVBMQcREMKjgn0/SORMMK5Dj3zwL/EH25aIRZFixnCrwB1Ylmd9yFnIrEBV0bYtVA2AY55H/wLJ1GrtOr+q3AAAAABJRU5ErkJggg==",
     },
     {
         title: "Chat Visuals",
@@ -42,5 +48,30 @@ export const LabData = [
         type: "video",
         src: "/timeline.mp4",
         theme: "light",
+        blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAAXNSR0IArs4c6QAAAIpJREFUGFc9zVsOgjAQheEzSEAEiYnpC7r/XbkKoKVz6Rhs4nn+cn5S/hRVIzMDs6LrOwgLzk3T4HSCGA/KLNjWhPs8Iu4JxR3vV6hgXSOJGlQUzaVBMQcREMKjgn0/SORMMK5Dj3zwL/EH25aIRZFixnCrwB1Ylmd9yFnIrEBV0bYtVA2AY55H/wLJ1GrtOr+q3AAAAABJRU5ErkJggg==",
+    },
+    {
+        title: "Chat Visuals",
+        time: "July 2024",
+        showTime: "true",
+        showCTA: "true",
+        CTAcopy: "Check Prototype",
+        CTAredirectionURL: "/labs",
+        type: "image",
+        src: ChatIcons,
+        theme: "dark",
+        blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAAXNSR0IArs4c6QAAAIpJREFUGFc9zVsOgjAQheEzSEAEiYnpC7r/XbkKoKVz6Rhs4nn+cn5S/hRVIzMDs6LrOwgLzk3T4HSCGA/KLNjWhPs8Iu4JxR3vV6hgXSOJGlQUzaVBMQcREMKjgn0/SORMMK5Dj3zwL/EH25aIRZFixnCrwB1Ylmd9yFnIrEBV0bYtVA2AY55H/wLJ1GrtOr+q3AAAAABJRU5ErkJggg==",
+    },
+    {
+        title: "Chat Visuals",
+        time: "July 2024",
+        showTime: "true",
+        showCTA: "true",
+        CTAcopy: "Check Prototype",
+        CTAredirectionURL: "/labs",
+        type: "video",
+        src: "/timeline.mp4",
+        theme: "light",
+        blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAAXNSR0IArs4c6QAAAIpJREFUGFc9zVsOgjAQheEzSEAEiYnpC7r/XbkKoKVz6Rhs4nn+cn5S/hRVIzMDs6LrOwgLzk3T4HSCGA/KLNjWhPs8Iu4JxR3vV6hgXSOJGlQUzaVBMQcREMKjgn0/SORMMK5Dj3zwL/EH25aIRZFixnCrwB1Ylmd9yFnIrEBV0bYtVA2AY55H/wLJ1GrtOr+q3AAAAABJRU5ErkJggg==",
     }
 ]

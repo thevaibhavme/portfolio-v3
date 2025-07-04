@@ -18,6 +18,7 @@
     left: 0;
     width: 100%;
     bottom: 0;
+    z-index: 20;
 }
 
 .labDetails {
@@ -27,6 +28,31 @@
     font-style: normal;
     font-weight: 510;
     line-height: 21px;
+}
+
+.labVideoContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoPlaceholderImage {
+    position: absolute;
+    inset: 0;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    z-index: 2;
+    filter: blur(32px);
+}
+
+.labVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .time {

@@ -1,4 +1,3 @@
-import { Navbar } from "@/Components/Navbar/navbar"
 import styles from "./bio.module.css"
 import Image from "next/image"
 import { Experience } from "../../Components/Experience/experience"
@@ -13,11 +12,6 @@ export const metadata = {
 }
 
 export default function Bio() {
-
-    // useEffect(() => {
-    //     document.title = "thevaibhav's bio";
-    // }, [])
-
 
     return (
         <>
