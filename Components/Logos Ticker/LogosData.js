@@ -7,10 +7,10 @@ const logosData = [
         name: "Scaler",
         url: "./companyLogos/scaler.svg",
     },
-    {
-        name: "redBus",
-        url: "./companyLogos/redBus.svg",
-    },
+    // {
+    //     name: "redBus",
+    //     url: "./companyLogos/redBus.svg",
+    // },
     {
         name: "Attentive",
         url: "./companyLogos/attentive.svg",
