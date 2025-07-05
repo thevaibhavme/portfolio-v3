@@ -2,7 +2,7 @@
 import styles from './lab.module.css'
 import Masonry from 'react-masonry-css'
 import { LabCard } from '@/Components/Lab/labCard';
-import { LabData } from '@/Components/Lab/labData';
+import { LabData } from '@/data/lab/labData';
 
 export default function Lab() {
 
@@ -73,7 +73,15 @@ export default function Lab() {
                         //     />
                         // </div>
 
-                        <LabCard key={i} type={labCardData.type} src={labCardData.src} title={labCardData.title} time={labCardData.time} blurDataURLLink={labCardData.blurDataURLLink}/>
+                        <LabCard
+                        key={i}
+                        type={labCardData.type}
+                        src={labCardData.src}
+                        title={labCardData.title}
+                        time={labCardData.time}
+                        blurDataURLLink={labCardData.blurDataURLLink}
+                        blurPlaceholderImage={labCardData.blurPlaceholderImage}
+                        />
                     ))}
                 </Masonry>
             </div>

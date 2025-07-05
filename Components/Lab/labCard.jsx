@@ -2,8 +2,6 @@
 import styles from "./labCard.module.css"
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import TimelineImg from "@/labAssets/timelineimg.png"
-import { LabImage } from "./labImage";
 
 
 export function LabCard({
@@ -15,61 +13,45 @@ export function LabCard({
     // CTAredirectionURL,
     type,
     src,
-    detailsTheme,
     blurDataURLLink,
+    blurPlaceholderImage,
 }) {
 
-    const [videoLoaded, setVideoLoaded] = useState(false);
+    const [videoReady, setVideoReady] = useState(false);
     const videoRef = useRef(null);
-
-    // compute ratio from the thumbnail’s own metadata
-    const ratio = TimelineImg.width / TimelineImg.height;
+    // const [aspectRatio, setAspectRatio] = useState(16 / 9);
 
     useEffect(() => {
+        if (!blurPlaceholderImage) return;
         const vid = videoRef.current;
         if (!vid) return;
 
-        const markLoaded = () => setVideoLoaded(true);
+        const markReady = () => setVideoReady(true);
 
-        // if metadata is already loaded (cache, fast network), mark immediately
+        // if already cached
         if (vid.readyState >= 1) {
-            markLoaded();
+            markReady();
             return;
         }
 
-        // otherwise wait for the event
-        vid.addEventListener("loadedmetadata", markLoaded);
-        return () => vid.removeEventListener("loadedmetadata", markLoaded);
-    }, []);
+        vid.addEventListener("loadedmetadata", markReady);
+        return () => vid.removeEventListener("loadedmetadata", markReady);
+    }, [blurPlaceholderImage]);
 
 
     return (
         <div className={styles.labParentContainer}>
             {type === "image" ? (
-                // <Image
-                //     src={src}
-                //     alt={title}
-                //     width={332}
-                //     height={265}
-                //     className={styles.images}
-                //     style={{
-                //         width: "100%",
-                //         height: "auto",
-                //     }}
-                //     loading="lazy"
-                //     draggable={false}
-                //     placeholder="blur"
-                //     sizes="100vw"
-                // />
-                <LabImage
+                <Image
                     src={src}
                     alt={title}
                     width={332}
-                    height={265}
+                    height={260}
                     sizes="100vw"
                     style={{
                         width: "100%",
                         height: "auto",
+                        aspectRatio: "auto",
                     }}
                     loading="lazy"
                     draggable={false}
@@ -79,25 +61,16 @@ export function LabCard({
             ) : type === "video" ? (
                 <div
                     className={styles.labVideoContainer}
-                    style={{ aspectRatio: ratio }}
+                    style={{ aspectRatio: `${blurPlaceholderImage.width} / ${blurPlaceholderImage.height}` }}
                 >
-                    {/* {!videoLoaded && (
+                    {!videoReady && blurPlaceholderImage && (
                         <Image
-                            alt="check"
-                            width={332}
-                            height={166}
-                            src={TimelineImg}
-                            aria-hidden="true"
-                        />
-                    )} */}
-                    {!videoLoaded && (
-                        <Image
-                            src={TimelineImg}
+                            src={blurPlaceholderImage}
                             alt=""
-                            sizes="50vw"
-                            placeholder="blur"
                             fill
-                            className={styles.videoPlaceholderImage}
+                            sizes="100vw"
+                            placeholder="blur"
+                            className={styles.videoPlaceholder}
                         />
                     )}
                     <video
@@ -106,15 +79,9 @@ export function LabCard({
                         muted
                         loop
                         autoPlay
-                        // style={{
-                        //     width: '100%',
-                        //     height: "auto",
-                        //     borderRadius: "8px",
-                        // }}‰
-                        // poster="/timelineimg.png"
                         className={styles.labVideo}
                         src={src}
-                        onLoadedMetadata={() => setVideoLoaded(true)}
+                        onLoadedMetadata={() => setVideoReady(true)}
                     >
                     </video>
                 </div>
