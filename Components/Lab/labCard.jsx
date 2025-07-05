@@ -51,7 +51,7 @@ export function LabCard({
                     style={{
                         width: "100%",
                         height: "auto",
-                        aspectRatio: "auto",
+                        aspectRatio: `${src.width} / ${src.height}`,
                     }}
                     loading="lazy"
                     draggable={false}
@@ -63,7 +63,7 @@ export function LabCard({
                     className={styles.labVideoContainer}
                     style={{ aspectRatio: `${blurPlaceholderImage.width} / ${blurPlaceholderImage.height}` }}
                 >
-                    {!videoReady && blurPlaceholderImage && (
+                    {!videoReady && (
                         <Image
                             src={blurPlaceholderImage}
                             alt=""
