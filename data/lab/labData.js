@@ -1,3 +1,9 @@
+import IllustrationStyle from "./images/illustrationstyle.png"
+import FunnySignInInteractionPlaceholder from "./videos/funnysignininteraction.png"
+import FunnySignInInteraction from "./videos/funnysignininteraction.mp4"
+import DuckFaceFigma from "./images/duckfacefigma.png"
+import VercelLogoFurExperimentPlaceholder from "./videos/vercellogofurexperiment.png"
+import VercelLogoFurExperiment from "./videos/vercellogofurexperiment.webm"
 import VercelLogoExperimentPlaceholder from "./videos/vercellogoexperiment.png"
 import VercelLogoExperiment from "./videos/vercellogoexperiment.webm"
 import Iconillustration from "./images/iconillustrations.webp"
@@ -12,6 +18,56 @@ import ThemeSwitcherPlaceholder from "./videos/themeswitcher.png"
 
 export const LabData = [
     {
+        title: "Illustration Style",
+        time: "June 2025",
+        showTime: "true",
+        showCTA: "true",
+        CTAcopy: "Check Prototype",
+        CTAredirectionURL: "/labs",
+        type: "image",
+        src: IllustrationStyle,
+        theme: "light",
+        // blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAFtJREFUKFN9j0EOwCAIBEH0/w9WpBkSbRvTciLZZSZoRIT8jK4CPXfPqpmJquaeBcIxhiwYYa01S5sw55Tee1611qSUchPYwD8VaF4KrqGgIYRyKCgw4A/F16cXrIdM6fcBYV8AAAAASUVORK5CYII=",
+    },
+    {
+        title: "Funny Sign In Interaction",
+        time: "June 2025",
+        showTime: "true",
+        showCTA: "true",
+        CTAcopy: "Check Prototype",
+        CTAredirectionURL: "/labs",
+        type: "video",
+        src: FunnySignInInteraction,
+        theme: "dark",
+        blurPlaceholderImage: FunnySignInInteractionPlaceholder,
+        // blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAYAAAAPU20uAAAAAXNSR0IArs4c6QAAAORJREFUKFNtjrFKxEAYhGfy7+YkyxEVtDwF0wRia+OBCNorJ3hcpYUoWFtb+QDa2looWKqNzb6DkGe46jRF9i5ko6IgKN50Ax/fDJWa8e14UdisQusJWtEhZgMiHL8gmKw4RlHsl5c6opQC+IGAAUQUmnePerjmqCT0xsSCXyH53drYcNxe3/f3T9d/gB/2/OjR8Wz3xF/cXUme5yiKAsYYVFWFLMtwenDpuLO1528fbsRaizRNUZYl6rpGkiQYDI4du91Nb+3z1Iler++odcvPzy38A76Ovr6NHEmORcKphqbR7hPWXEZefXBBIAAAAABJRU5ErkJggg==",
+    },
+    {
+        title: "Duck Face Figma",
+        time: "June 2025",
+        showTime: "true",
+        showCTA: "true",
+        CTAcopy: "Check Prototype",
+        CTAredirectionURL: "/labs",
+        type: "image",
+        src: DuckFaceFigma,
+        theme: "dark",
+        blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAAXNSR0IArs4c6QAAAJxJREFUGFddjq0LwmAchJ/fFIa+DnGoMLAsiWIzmfxIBv9WjUbBYFAwaZDBQNAkS3sFx3CvzKDipePu4ThhOTMArqVwkiKCRWynRJnOYyQHLISx9lntN3jKZdDrM7cPZJg/INgxqXSpthosSscfQISR9jnFF4aqw7WsWRdCzGdBhOmjjWfX2HImlIi7Sb4fctcUh7pRBNxIeb7LXC86xzkT/OpCPgAAAABJRU5ErkJggg==",
+    },
+    {
+        title: "Vercel Logo Fur Experiment",
+        time: "June 2025",
+        showTime: "true",
+        showCTA: "true",
+        CTAcopy: "Check Prototype",
+        CTAredirectionURL: "/labs",
+        type: "video",
+        src: VercelLogoFurExperiment,
+        theme: "dark",
+        blurPlaceholderImage: VercelLogoFurExperimentPlaceholder,
+        // blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAYAAAAPU20uAAAAAXNSR0IArs4c6QAAAORJREFUKFNtjrFKxEAYhGfy7+YkyxEVtDwF0wRia+OBCNorJ3hcpYUoWFtb+QDa2looWKqNzb6DkGe46jRF9i5ko6IgKN50Ax/fDJWa8e14UdisQusJWtEhZgMiHL8gmKw4RlHsl5c6opQC+IGAAUQUmnePerjmqCT0xsSCXyH53drYcNxe3/f3T9d/gB/2/OjR8Wz3xF/cXUme5yiKAsYYVFWFLMtwenDpuLO1528fbsRaizRNUZYl6rpGkiQYDI4du91Nb+3z1Iler++odcvPzy38A76Ovr6NHEmORcKphqbR7hPWXEZefXBBIAAAAABJRU5ErkJggg==",
+    },
+    {
         title: "Vercel Logo Experiment",
         time: "June 2025",
         showTime: "true",
@@ -22,6 +78,7 @@ export const LabData = [
         src: VercelLogoExperiment,
         theme: "dark",
         blurPlaceholderImage: VercelLogoExperimentPlaceholder,
+        // blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAYAAAAPU20uAAAAAXNSR0IArs4c6QAAAORJREFUKFNtjrFKxEAYhGfy7+YkyxEVtDwF0wRia+OBCNorJ3hcpYUoWFtb+QDa2looWKqNzb6DkGe46jRF9i5ko6IgKN50Ax/fDJWa8e14UdisQusJWtEhZgMiHL8gmKw4RlHsl5c6opQC+IGAAUQUmnePerjmqCT0xsSCXyH53drYcNxe3/f3T9d/gB/2/OjR8Wz3xF/cXUme5yiKAsYYVFWFLMtwenDpuLO1528fbsRaizRNUZYl6rpGkiQYDI4du91Nb+3z1Iler++odcvPzy38A76Ovr6NHEmORcKphqbR7hPWXEZefXBBIAAAAABJRU5ErkJggg==",
     },
     {
         title: "Icon Illustration",
@@ -32,7 +89,7 @@ export const LabData = [
         CTAredirectionURL: "/labs",
         type: "image",
         src: Iconillustration,
-        theme: "dark",
+        theme: "light",
         blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAAXNSR0IArs4c6QAAAItJREFUGFeFjr0KwjAURr9rsUJCK7YZuujgpO//KDp1EUGH1t+E2Ja0yRUyC575cDikNXOa4ifOAWTMyMwOl+sTm3UJIuBwPGG/22KWzEHajBz8gK5LIGWIpaZ5Q4gFhMxA90fP1mr4KaCqyijU9Rn5UiLPVqD29uGht5g8QSkZhbZ5wfuAolCgf5NfNoVBDy3FmWYAAAAASUVORK5CYII=",
     },
     {
@@ -58,6 +115,7 @@ export const LabData = [
         src: PlayfulChips,
         theme: "dark",
         blurPlaceholderImage: PlayfulChipsPlaceholder,
+        // blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAPRJREFUKFNVyr0vAwEYgPHnre8cOU1QUh+p4RodSjWhg0VMbCYxYrKYxMRfYTRYMUk0aS8kZk3EV3xGuQGbNO0FbfTuFSz81ucRd2Nej0qNVD7K+EYLYhrIp099sYBRDiFbq+samRwhFo/xV/7sGDeTRSaWD3RtOkgybv0bHi5PcHZzSNPSoe7NmAxF+3Df3vE8j1bT5Dl/heb2EZmz1V5oY3TQolqF10KRUHuQx7sLuu93EJlNq73YRSoRxdcawEcEnNtzwi8ZJDC1rdmVflLJAZTf4ZtzfUr4KY0ExjY10VMiYnXS2yA/cbz2hua6IsMdFb4AVEtXTjaD26UAAAAASUVORK5CYII=",
     },
     {
         title: "Distractions",
@@ -82,6 +140,7 @@ export const LabData = [
         src: ThemeSwitcher,
         theme: "dark",
         blurPlaceholderImage: ThemeSwitcherPlaceholder,
+        // blurDataURLLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAAXNSR0IArs4c6QAAAE9JREFUGFdNzTEOwCAMQ9Gfigtk4P7n64qahUJAQQXVW6ynWIAXEBHhnzFGnBatp5Qk5xyK1hq1VkopuPtzgKou0HtfwMwOuIFrT3yv95pN56klvHZ9UuYAAAAASUVORK5CYII=",
     },
     {
         title: "Rubber Material",

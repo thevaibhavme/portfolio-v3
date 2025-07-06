@@ -1,13 +1,7 @@
-"use client";
 import styles from "./logosTicker.module.css"
 import logosData from "./LogosData"
-import { useTheme } from "next-themes"
 
 export default function LogosTicker() {
-
-    const { theme, resolvedTheme, setTheme } = useTheme();
-
-    const current = theme;
 
     return (
         <div className={styles.mainContainer}>

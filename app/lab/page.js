@@ -74,13 +74,15 @@ export default function Lab() {
                         // </div>
 
                         <LabCard
-                        key={i}
-                        type={labCardData.type}
-                        src={labCardData.src}
-                        title={labCardData.title}
-                        time={labCardData.time}
-                        blurDataURLLink={labCardData.blurDataURLLink}
-                        blurPlaceholderImage={labCardData.blurPlaceholderImage}
+                            key={i}
+                            // type={labCardData.type}
+                            // src={labCardData.src}
+                            // title={labCardData.title}
+                            // time={labCardData.time}
+                            // blurDataURLLink={labCardData.blurDataURLLink}
+                            // blurPlaceholderImage={labCardData.blurPlaceholderImage}
+                            // theme={labCardData.theme}
+                            {...labCardData}
                         />
                     ))}
                 </Masonry>

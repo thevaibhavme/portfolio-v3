@@ -1,7 +1,82 @@
-.heading{
+.parentContainer {
   display: flex;
   width: 100%;
   height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--bg-secondary);
+}
+
+.mainContainer {
+  display: flex;
+  width: 768px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-top: 32px;
+}
+
+.nameContainer {
+  display: flex;
+  height: 160px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: stretch;
+  gap: 8px;
+  border-radius: 12px;
+  background: var(--bg-primary);
+  text-align: center;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.mottoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.mottoBox {
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 12px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 27px;
+  /* 158.824% */
+}
+
+.labContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.labVideo {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.detailsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
 }

@@ -11,7 +11,7 @@
     flex: 1 0 0;
     color: var(--text-primary);
     text-align: center;
-    font-family: Figtree;
+    font-family: var(--font-figtree), -apple-system;
     font-size: 48px;
     font-style: normal;
     font-weight: 590;

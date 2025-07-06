@@ -15,8 +15,10 @@ export function LabCard({
     src,
     blurDataURLLink,
     blurPlaceholderImage,
+    theme,
 }) {
 
+    console.log(theme, "RandomABC");
     const [videoReady, setVideoReady] = useState(false);
     const videoRef = useRef(null);
     // const [aspectRatio, setAspectRatio] = useState(16 / 9);
@@ -56,7 +58,7 @@ export function LabCard({
                     loading="lazy"
                     draggable={false}
                     placeholder="blur"
-                    blurDataURL={blurDataURLLink}
+                    // blurDataURL={blurDataURLLink}
                 />
             ) : type === "video" ? (
                 <div
@@ -71,6 +73,7 @@ export function LabCard({
                             sizes="100vw"
                             placeholder="blur"
                             className={styles.videoPlaceholder}
+                            // blurDataURL={blurDataURLLink}
                         />
                     )}
                     <video
@@ -83,11 +86,13 @@ export function LabCard({
                         src={src}
                         onLoadedMetadata={() => setVideoReady(true)}
                     >
+                        <source src={src} type="video/webm" />
+                        <source src={src.replace('.webm', '.mp4')} type="video/mp4" />
                     </video>
                 </div>
             ) : null
             }
-            <div className={styles.labCardDetailsContainer}>
+            <div className={styles.labCardDetailsContainer} data-theme={theme}>
                 <div className={styles.labDetails}>{title}</div>
                 <div className={`${styles.labDetails} ${styles.time}`}>{time}</div>
             </div>

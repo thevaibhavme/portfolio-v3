@@ -1,4 +1,3 @@
-"use client";
 import styles from "./experience.module.css"
 
 export function Experience({ name, duration }) {

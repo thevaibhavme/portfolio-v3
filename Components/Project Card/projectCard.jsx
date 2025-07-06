@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import styles from "./projectCard.module.css"
 import Image from "next/image"
