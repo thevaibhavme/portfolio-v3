@@ -1,91 +1,93 @@
-"use client";
+// "use client";
+import Image from 'next/image';
 import styles from './lab.module.css'
-import Masonry from 'react-masonry-css'
-import { LabCard } from '@/Components/Lab/labCard';
-import { LabData } from '@/data/lab/labData';
+// import Masonry from 'react-masonry-css'
+// import { LabCard } from '@/Components/Lab/labCard';
+// import { LabData } from '@/data/lab/labData';
+// import RandomTest from '@/Components/randomTest';
+import MasonryTest from '@/Components/masonryTest';
+import Image1 from "@/public/masonryTestImages/1.jpg"
+import Image2 from "@/public/masonryTestImages/2.jpg"
+import Image3 from "@/public/masonryTestImages/3.jpg"
+import Image4 from "@/public/masonryTestImages/4.jpg"
+import Image5 from "@/public/masonryTestImages/5.jpg"
 
-export default function Lab() {
+export default function Lab(
+    // { ...props }
+) {
 
-    const images = [
-        '/chaticons.png',
-        '/yellow.png',
-        '/pink.png',
-        '/check.png',
-        '/final.png',
-        '/final.png',
-        '/final.png',
-        '/final.png',
+    // console.log(props);
+
+    // const images = [
+    //     '/chaticons.png',
+    //     '/yellow.png',
+    //     '/pink.png',
+    //     '/check.png',
+    //     '/final.png',
+    //     '/final.png',
+    //     '/final.png',
+    //     '/final.png',
+    // ]
+
+    // const breakpointColumnsObj = {
+    //     default: 3,
+    //     960: 2,
+    //     480: 1
+    // };
+
+    const ImagesArr = [
+        {
+            title: "Image 1",
+            source: Image1,
+        },
+        {
+            title: "Image 2",
+            source: Image2,
+        },
+        {
+            title: "Image 3",
+            source: Image3,
+        },
+        {
+            title: "Image 4",
+            source: Image4,
+        },
+        {
+            title: "Image 5",
+            source: Image5,
+        },
     ]
-
-    const breakpointColumnsObj = {
-        default: 3,
-        960: 2,
-        480: 1
-    };
 
     return (
         <>
             <div className={styles.labParentContainer}>
-                <Masonry
-                    breakpointCols={breakpointColumnsObj}
+                {/* <RandomTest styles={styles} /> */}
+                {/* <MasonryTest
+                    breakpointCols={{ default: 3 }}        // ← only the `default` count is used
                     className={styles.my_masonry_grid}
-                    columnClassName={styles.my_masonry_grid_column}>
-                    {/* <video
-                    playsInline
-                    muted          // ← Mute it so autoplay is allowed
-                    loop
-                    autoPlay
-                    style={{
-                        width: '100%',
-                        borderRadius: "8px",
-                    }}
+                    columnClassName={styles.my_masonry_grid_column}
                 >
-                    <source src="/timeline.mp4" />
-                    <source src="/timeline.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                    <source src="/timeline.mp4" type="video/mp4" />
-                    <track
-                        // src="/path/to/captions.vtt"
-                        // kind="subtitles"
-                        srcLang="en"
-                        label="English"
-                    />
-                </video> */}
-                    {LabData.map((labCardData, i) => (
-                        // <div key={i} className={styles.item}>
-                        //     <div className={styles.blurOverlay} />
-                        //     <Image
-                        //         width={2560}
-                        //         height={1920}
-                        //         quality={100}
-                        //         src={src}
-                        //         alt="labimages"
-                        //         className={styles.images}
-                        //         style={{
-                        //             width: "100%",
-                        //             height: "auto",
-                        //         }}
-                        //         loading='lazy'
-                        //         draggable={false}
-                        //         placeholder="blur"
-                        //         blurDataURL="..."
-                        //         sizes="(max-width: 720px) 100vw, (max-width: 1200px) 100vw"
-                        //     />
-                        // </div>
 
-                        <LabCard
+                    {ImagesArr.map((pic, i) => (
+                        <Image key={i} src={pic.source} alt={pic.title} className={styles.pic} />
+                    ))}
+
+                </MasonryTest> */}
+                <MasonryTest
+                    breakpointCols={3}                      /* default: 3 cols */
+                    className={styles.masonry}
+                    columnClassName={styles.masonry_column}
+                >
+                    {ImagesArr.map((pic, i) => (
+                        <Image
                             key={i}
-                            // type={labCardData.type}
-                            // src={labCardData.src}
-                            // title={labCardData.title}
-                            // time={labCardData.time}
-                            // blurDataURLLink={labCardData.blurDataURLLink}
-                            // blurPlaceholderImage={labCardData.blurPlaceholderImage}
-                            // theme={labCardData.theme}
-                            {...labCardData}
+                            src={pic.source}
+                            alt={pic.title}
+                            className={styles.pic}
+                            placeholder='blur'
                         />
                     ))}
-                </Masonry>
+                </MasonryTest>
             </div>
         </>
     )
