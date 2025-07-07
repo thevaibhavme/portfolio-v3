@@ -11,29 +11,12 @@ import Image2 from "@/public/masonryTestImages/2.jpg"
 import Image3 from "@/public/masonryTestImages/3.jpg"
 import Image4 from "@/public/masonryTestImages/4.jpg"
 import Image5 from "@/public/masonryTestImages/5.jpg"
+import Image6 from "@/public/masonryTestImages/6.jpg"
+import RandomTest from '@/Components/randomTest';
 
 export default function Lab(
-    // { ...props }
+    {style}
 ) {
-
-    // console.log(props);
-
-    // const images = [
-    //     '/chaticons.png',
-    //     '/yellow.png',
-    //     '/pink.png',
-    //     '/check.png',
-    //     '/final.png',
-    //     '/final.png',
-    //     '/final.png',
-    //     '/final.png',
-    // ]
-
-    // const breakpointColumnsObj = {
-    //     default: 3,
-    //     960: 2,
-    //     480: 1
-    // };
 
     const ImagesArr = [
         {
@@ -56,25 +39,17 @@ export default function Lab(
             title: "Image 5",
             source: Image5,
         },
+        {
+            title: "Image 6",
+            source: Image6,
+        }
     ]
 
     return (
         <>
             <div className={styles.labParentContainer}>
-                {/* <RandomTest styles={styles} /> */}
                 {/* <MasonryTest
-                    breakpointCols={{ default: 3 }}        // ← only the `default` count is used
-                    className={styles.my_masonry_grid}
-                    columnClassName={styles.my_masonry_grid_column}
-                >
-
-                    {ImagesArr.map((pic, i) => (
-                        <Image key={i} src={pic.source} alt={pic.title} className={styles.pic} />
-                    ))}
-
-                </MasonryTest> */}
-                <MasonryTest
-                    breakpointCols={3}                      /* default: 3 cols */
+                    breakpointCols={3}
                     className={styles.masonry}
                     columnClassName={styles.masonry_column}
                 >
@@ -85,9 +60,22 @@ export default function Lab(
                             alt={pic.title}
                             className={styles.pic}
                             placeholder='blur'
+                            blurDataURL={pic.source.blurDataURL}
                         />
                     ))}
-                </MasonryTest>
+                </MasonryTest> */}
+                <RandomTest styles={styles}>
+                    {ImagesArr.map((pic, i) => (
+                        <Image
+                            key={i}
+                            src={pic.source}
+                            alt={pic.title}
+                            className={styles.pic}
+                            placeholder='blur'
+                            blurDataURL={pic.source.blurDataURL}
+                        />
+                    ))}
+                </RandomTest>
             </div>
         </>
     )

@@ -1,5 +1,5 @@
 "use client"
-// import styles from './lab.module.css'
+import styles from '@/app/lab/lab.module.css'
 import Masonry from 'react-masonry-css'
 import { LabCard } from '@/Components/Lab/labCard';
 import { LabData } from '@/data/lab/labData';

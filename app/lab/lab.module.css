@@ -1,10 +1,10 @@
 .labParentContainer {
   display: flex;
   width: 100%;
-  padding: 8px 8px 8px 0px;
+  padding: 8px 0px 8px 8px;
 }
 
-/* .my_masonry_grid {
+.my_masonry_grid {
   display: flex;
   width: 100%;
 }
@@ -44,134 +44,13 @@
   background-color: rgba(255, 255, 0, 0.01);
   backdrop-filter: blur(32px);
   animation: backdropFilterAnimation 0.2s ease-out forwards;
-} */
+}
 
-/* @keyframes backdropFilterAnimation{
+@keyframes backdropFilterAnimation{
   0%{
     backdrop-filter: blur(2px);
   }
   100%{
     backdrop-filter: blur(0px);
-  }
-} */
-
-/* .my_masonry_grid{
-  display: flex;
-  margin-left: -8px;
-  width: 100%;
-}
-.my_masonry_grid_column {
-  padding-left: 8px;
-  background-clip: padding-box;
-}
-
-.my_masonry_grid_column > * {
-  margin-bottom: 4px;
-}
-
-.pic{
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 600px) {
-  .my_masonry_grid {
-    margin-left: -8px;
-  }
-  .my_masonry_grid_column {
-    padding-left: 8px;
-  }
-  .my_masonry_grid_column > * {
-    margin-bottom: 8px;
-  }
-} */
-
-/* gutter = 16px by default */
-/* .masonry {
-  display: flex;
-  margin-left: -16px;
-}
-
-.masonry_column {
-  padding-left: 16px;          
-  background-clip: padding-box;
-  margin-bottom: 16px;      
-}
-
-.pic{
-  width: 100%;
-  height: auto;
-}
-
-
-@media (max-width: 960px) {
-  .masonry {
-    --masonry-col-count: 2;
-    margin-left: -12px;
-  }
-  .masonry_column {
-    padding-left: 12px;
-    margin-bottom: 12px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .masonry {
-    --masonry-col-count: 1;
-    margin-left: 0;
-  }
-  .masonry_column {
-    padding-left: 0;
-    margin-bottom: 8px;
-  }
-} */
-
-/* in Masonry.module.css */
-
-.masonry {
-  display: flex;
-  flex-wrap: wrap;
-  /* default = 3 */
-  --masonry-col-count: 3;
-  margin-left: 0px;
-}
-
-.masonry_column {
-  /* each column is 1/var(--masonry-col-count) wide */
-  width: calc(100% / var(--masonry-col-count));
-  padding-left: 8px;
-  margin-bottom: 16px;
-  background-clip: padding-box;
-}
-
-/* ≤ 960px ⇒ 2 */
-@media (max-width: 960px) {
-  .masonry {
-    --masonry-col-count: 2;
-    /* margin-left: 8px; */
-  }
-  .masonry_column {
-    padding-left: 8px;
-    margin-bottom: 12px;
-  }
-}
-
-.pic{
-  width: 100%;
-  height: auto;
-  margin-bottom: 4px;
-}
-
-/* ≤ 480px ⇒ 1 */
-@media (max-width: 480px) {
-  .masonry {
-    --masonry-col-count: 1;
-    /* margin-left: 0; */
-    margin-left: 8px;
-  }
-  .masonry_column {
-    padding-left: 0;
-    margin-bottom: 0px;
   }
 }
