@@ -74,14 +74,14 @@ export function LabCard({
                         />
                     )}
                     <video
-                        ref={videoRef}
+                        // ref={videoRef}
                         playsInline
                         muted
                         loop
                         autoPlay
                         className={styles.labVideo}
                         src={src}
-                        onLoadedMetadata={() => setVideoReady(true)}
+                        // onLoadedMetadata={() => setVideoReady(true)}
                         poster={videoPlaceholder}
                     />
                         {/* <source src={src} type="video/mp4" /> */}
