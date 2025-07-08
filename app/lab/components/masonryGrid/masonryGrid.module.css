@@ -1,0 +1,9 @@
+.my_masonry_grid {
+    display: flex;
+    width: 100%;
+  }
+  
+  .my_masonry_grid_column {
+    padding-left: 8px;
+    background-clip: padding-box;
+  }

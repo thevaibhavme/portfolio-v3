@@ -84,8 +84,6 @@ export function LabCard({
                         // onLoadedMetadata={() => setVideoReady(true)}
                         poster={videoPlaceholder}
                     />
-                        {/* <source src={src} type="video/mp4" /> */}
-                    {/* </video> */}
                 </div>
             ) : null
             }

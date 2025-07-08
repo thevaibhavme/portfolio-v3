@@ -1,3 +1,4 @@
+import MailIcon from "./images/mailicons.png"
 import ThemeSwitcherPlaceholder from "./videos/themeswitcher.png"
 import ThemeSwitcher from "./videos/themeswitcher.mp4"
 import GlowingIcon from "./images/glowingicon.png"
@@ -5,6 +6,18 @@ import RubberMaterial from "./images/rubbermaterial.png"
 import MacIcons from "./images/macicons.png"
 
 export const LabData = [
+    {
+        title: "Mail Icons",
+        time: "March 2025",
+        showTime: "true",
+        showCTA: "true",
+        CTAcopy: "Check Prototype",
+        CTAredirectionURL: "/labs",
+        type: "image",
+        src: MailIcon,
+        // videoPlaceholder: ThemeSwitcherPlaceholder,
+        theme: "light",
+    },
     {
         title: "Theme Switcher",
         time: "June 2024",
