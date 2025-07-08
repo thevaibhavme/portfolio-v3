@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import FunnySignInInteraction from "../data/lab/videos/funnysignininteraction.mp4"
+// import FunnySignInInteraction from "./lab/data/lab/videos/funnysignininteraction.mp4"
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
             <div className={styles.mottoBox}>Things</div>
           </div>
           <div className={styles.labContainer}>
-            <Link href={"/lab"} className={styles.labItem}>
+            {/* <Link href={"/lab"} className={styles.labItem}>
               <video
                 playsInline
                 muted
@@ -23,8 +23,6 @@ export default function Home() {
                 className={styles.labVideo}
                 src={FunnySignInInteraction}
               >
-                {/* <source src={src} type="video/webm" />
-                <source src={src.replace('.webm', '.mp4')} type="video/mp4" /> */}
               </video>
             </Link>
             <Link href={"/lab"} className={styles.labItem}>
@@ -36,8 +34,6 @@ export default function Home() {
                 className={styles.labVideo}
                 src={FunnySignInInteraction}
               >
-                {/* <source src={src} type="video/webm" />
-                <source src={src.replace('.webm', '.mp4')} type="video/mp4" /> */}
               </video>
             </Link>
             <Link href={"/lab"} className={styles.labItem}>
@@ -49,10 +45,8 @@ export default function Home() {
                 className={styles.labVideo}
                 src={FunnySignInInteraction}
               >
-                {/* <source src={src} type="video/webm" />
-                <source src={src.replace('.webm', '.mp4')} type="video/mp4" /> */}
               </video>
-            </Link>
+            </Link> */}
           </div>
           <div className={styles.detailsContainer}>
             <div className={styles.mottoBox}>Designer Portfolio</div>

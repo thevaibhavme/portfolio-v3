@@ -1,8 +1,8 @@
 "use client"
 import styles from '@/app/lab/lab.module.css'
 import Masonry from 'react-masonry-css'
-import { LabCard } from '@/Components/Lab/labCard';
-import { LabData } from '@/data/lab/labData';
+import { LabCard } from '@/app/lab/components/labcard/labCard';
+import { LabData } from '@/app/lab/data/labData';
 
 const images = [
     '/chaticons.png',
@@ -21,7 +21,7 @@ const breakpointColumnsObj = {
     480: 1
 };
 
-export default function RandomTest({ styles }) {
+export default function  MasonryGrid({ styles }) {
 
     return (
         <Masonry

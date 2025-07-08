@@ -1,4 +1,4 @@
-import CoverImage from "@/data/coverImage.png"
+// import CoverImage from "@/data/coverImage.png"
 import { Hyperlink } from "@/Components/Link/hyperlink";
 import { BlogHeading, BlogParagraph, BlogParagraphEmphasis, BlogSubHeading, BlogImage, BlogParentContainer, EndingNote } from "@/Components/Blogs/blogsComps";
 
@@ -12,7 +12,7 @@ export default function TestBlog() {
         <>
             <BlogParentContainer>
                 <BlogHeading>Learnings as a UX Designer intern at MakeMyTrip</BlogHeading>
-                <BlogImage source={CoverImage}></BlogImage>
+                {/* <BlogImage source={CoverImage}></BlogImage> */}
                 <BlogParagraph>Here’s a glimpse of what I learnt during my internship at MakeMyTrip</BlogParagraph>
                 <BlogParagraph>First things first, I would like to thank <Hyperlink newTab={true} src={"https://www.linkedin.com/in/stuti-kamboj-85693928/"}>Stuti Kamboj</Hyperlink> and <Hyperlink newTab={true} src={"https://www.linkedin.com/in/u-k-karan-a1202b133/"}>U.K. Karan</Hyperlink> for offering me this opportunity to work with some really good people. I would also like to thank my manager <Hyperlink newTab={true} src={"https://www.linkedin.com/in/kapil-solanki-164166b/"}>Kapil Solanki</Hyperlink> for supporting me throughout my tenure.After an amazing stint at redBus, I decided joined the Go-MMT group once again but this time I worked for MakeMyTrip and GoIbibo flights team.If you want to know about my experience at redBus, do check out the story <Hyperlink newTab={true} src={"https://thevaibhavme.medium.com/my-6-months-internship-experience-at-redbus-262e6abbd1fd?source=post_page-----964d7b38e61f---------------------------------------"}>here</Hyperlink>.</BlogParagraph>
                 <BlogParagraph>Going back in timeline to February 2024, the final semester of my undergrad was going on. One day, I was scrolling through LinkedIn and saw a post about Early Check-in UX Design Internship program on Go-MMT Design page. I was very eager to work in big teams and learn from the best, I decided to apply. After a couple of days, I got an email that my portfolio has been shortlisted and the next day I got a call from HR team. After that the interview was scheduled, I cleared it and finally joined the group again on 4th March 2024.</BlogParagraph>

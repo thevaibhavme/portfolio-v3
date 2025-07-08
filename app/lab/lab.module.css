@@ -1,7 +1,7 @@
 .labParentContainer {
   display: flex;
   width: 100%;
-  padding: 8px 0px 8px 8px;
+  padding: 8px 8px 8px 0px;
 }
 
 .my_masonry_grid {
@@ -10,20 +10,11 @@
 }
 
 .my_masonry_grid_column {
-  padding-left: 30px;
+  padding-left: 8px;
   background-clip: padding-box;
-  margin-left: 8px;
 }
 
-.my_masonry_grid_column .item {
-  background: grey;
-  margin-bottom: 12px;
-  width: 100%;
-  overflow: hidden;
-  animation: backdropFilterAnimation 0.5s ease-out forwards;
-}
-
-@keyframes labCardAnimation {
+/* @keyframes labCardAnimation {
   0% {
       filter: blur(8px);
   }
@@ -31,26 +22,13 @@
   100% {
       filter: blur(0px);
   }
-} 
+} */
 
-.images{
-  animation: labCardAnimation 0.8s ease-out forwards;
-}
-
-.blurOverlay{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 0, 0.01);
-  backdrop-filter: blur(32px);
-  animation: backdropFilterAnimation 0.2s ease-out forwards;
-}
-
-@keyframes backdropFilterAnimation{
+/* @keyframes backdropFilterAnimation{
   0%{
     backdrop-filter: blur(2px);
   }
   100%{
     backdrop-filter: blur(0px);
   }
-}
+} */

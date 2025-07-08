@@ -13,8 +13,7 @@ export function LabCard({
     // CTAredirectionURL,
     type,
     src,
-    blurDataURLLink,
-    blurPlaceholderImage,
+    videoPlaceholder,
     theme,
 }) {
 
@@ -24,7 +23,7 @@ export function LabCard({
     // const [aspectRatio, setAspectRatio] = useState(16 / 9);
 
     useEffect(() => {
-        if (!blurPlaceholderImage) return;
+        if (!videoPlaceholder) return;
         const vid = videoRef.current;
         if (!vid) return;
 
@@ -38,7 +37,7 @@ export function LabCard({
 
         vid.addEventListener("loadedmetadata", markReady);
         return () => vid.removeEventListener("loadedmetadata", markReady);
-    }, [blurPlaceholderImage]);
+    }, [videoPlaceholder]);
 
 
     return (
@@ -58,22 +57,20 @@ export function LabCard({
                     loading="lazy"
                     draggable={false}
                     placeholder="blur"
-                    // blurDataURL={blurDataURLLink}
                 />
             ) : type === "video" ? (
                 <div
                     className={styles.labVideoContainer}
-                    style={{ aspectRatio: `${blurPlaceholderImage.width} / ${blurPlaceholderImage.height}` }}
+                    style={{ aspectRatio: `${videoPlaceholder.width} / ${videoPlaceholder.height}` }}
                 >
                     {!videoReady && (
                         <Image
-                            src={blurPlaceholderImage}
+                            src={videoPlaceholder}
                             alt=""
                             fill
                             sizes="100vw"
                             placeholder="blur"
                             className={styles.videoPlaceholder}
-                            // blurDataURL={blurDataURLLink}
                         />
                     )}
                     <video
@@ -85,10 +82,10 @@ export function LabCard({
                         className={styles.labVideo}
                         src={src}
                         onLoadedMetadata={() => setVideoReady(true)}
-                    >
-                        <source src={src} type="video/webm" />
-                        <source src={src.replace('.webm', '.mp4')} type="video/mp4" />
-                    </video>
+                        poster={videoPlaceholder}
+                    />
+                        {/* <source src={src} type="video/mp4" /> */}
+                    {/* </video> */}
                 </div>
             ) : null
             }
