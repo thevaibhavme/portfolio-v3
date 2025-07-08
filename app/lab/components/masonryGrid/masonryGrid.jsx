@@ -1,8 +1,8 @@
 "use client"
 import Masonry from 'react-masonry-css'
 import styles from "./masonryGrid.module.css"
-import { LabCard } from '@/app/lab/components/labCard/labCard';
-import { LabData } from '@/app/lab/data/labData';
+import { LabCard } from "@/app/lab/components/labCard/labCard";
+import { LabData } from "@/app/lab/data/labData";
 
 const breakpointColumnsObj = {
     default: 3,
