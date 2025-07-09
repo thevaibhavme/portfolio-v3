@@ -1,0 +1,18 @@
+.mottoBox {
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 12px;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 510;
+    line-height: 27px;
+    /* 158.824% */
+  }

@@ -53,6 +53,8 @@ export function LabCard({
                         width: "100%",
                         height: "auto",
                         aspectRatio: `${src.width} / ${src.height}`,
+                        // border: "1px solid var(--border-primary)",
+                        // borderRadius: "8px",
                     }}
                     loading="lazy"
                     draggable={false}

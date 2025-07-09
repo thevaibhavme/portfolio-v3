@@ -2,7 +2,7 @@ import styles from './lab.module.css'
 import MasonryGrid from '@/app/lab/components/masonryGrid/masonryGrid';
 
 export const metadata = {
-    title: "thevaibhav's lab new",
+    title: "thevaibhav's lab",
     description: "Experiments & visuals from Vaibhav’s lab",
 };
 

@@ -6,6 +6,17 @@
   justify-content: flex-start;
   align-items: center;
   background: var(--bg-secondary);
+  /* animation: blurAnimation 0.8s ease-out; */
+}
+
+@keyframes blurAnimation {
+  0% {
+    filter: blur(20px);
+  }
+
+  100% {
+    filter: blur(0px);
+  }
 }
 
 .mainContainer {
@@ -15,7 +26,8 @@
   align-items: flex-start;
   gap: 8px;
   flex-shrink: 0;
-  margin-top: 32px;
+  margin: 24px;
+  padding: 0px;
 }
 
 .nameContainer {
@@ -62,15 +74,32 @@
   /* 158.824% */
 }
 
+.mottoContainer > .mottoBox:nth-child(4) {
+  display: none;
+}
+
 .labContainer {
   display: flex;
   align-items: center;
   gap: 8px;
   align-self: stretch;
+  height: fit-content;
 }
 
 .labVideo {
   width: 100%;
+  border-radius: 12px;
+}
+
+.labItem {
+  width: 100%;
+  display: flex;
+}
+
+
+.labImage {
+  width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 
@@ -79,4 +108,32 @@
   align-items: center;
   gap: 8px;
   align-self: stretch;
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    padding: 8px 8px 0px 8px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nameContainer {
+    width: 100%;
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 24px;
+  }
+  .labContainer{
+    flex-direction: column;
+  }
+  .toBeHidden{
+    display: none;
+  }
+  .mottoContainer > .mottoBox:nth-child(4) {
+    display: flex;
+  }
 }
