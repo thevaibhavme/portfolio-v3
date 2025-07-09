@@ -5,19 +5,18 @@ import MacIcons from "@/app/images/macicons.png";
 import GlowingIcons from "@/app/images/glowingicons.png";
 import Lines from "@/app/images/lines.png";
 import { cookies } from "next/headers";
+import { headers } from "next/headers";
 
-export const dynamic = "force-dynamic"
+export const dynamic = "force-dynamic"  // always read fresh headers
 
 export default async function Home() {
 
-  // 1) await cookies()  
-  const cookieStore   = await cookies()
-  const cityCookie    = cookieStore.get("visitor-city")
-  const countryCookie = cookieStore.get("visitor-country")
+  // 1. grab the Vercel-provided geo headers
+  const h = headers()
+  const city    = h.get("x-vercel-ip-city")
+  const country = h.get("x-vercel-ip-country")
 
-  const city    = cityCookie?.value
-  const country = countryCookie?.value
-
+  // 2. build your label
   const label = city
     ? `Last visit from ${city}, ${country}`
     : "Location unavailable"
