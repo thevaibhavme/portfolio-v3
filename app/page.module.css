@@ -7,6 +7,8 @@
   align-items: center;
   background: var(--bg-secondary);
   /* animation: blurAnimation 0.8s ease-out; */
+  margin-bottom: 1200px;
+  padding-bottom: 1200px;
 }
 
 @keyframes blurAnimation {
