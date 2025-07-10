@@ -4,76 +4,9 @@ import Image from "next/image";
 import MacIcons from "@/app/images/macicons.png";
 import GlowingIcons from "@/app/images/glowingicons.png";
 import Lines from "@/app/images/lines.png";
-import { cookies } from "next/headers";
-import { headers } from "next/headers";
-import { getLastVisitor } from "@/lib/getLastVisitor";
-
-// export const dynamic = "force-dynamic"  // always read fresh headers
-// export const dynamic = 'force-dynamic'  // ensures fresh cookies per request
-export const dynamic = 'force-dynamic'
+import LiveTime from "@/Components/Date/liveTime";
 
 export default function Home() {
-
-  // // 1. grab the Vercel-provided geo headers
-  // const h = headers()
-  // const city    = h.get("x-vercel-ip-city")
-  // const country = h.get("x-vercel-ip-country")
-
-  // // 2. build your label
-  // const label = city
-  //   ? `Last visit from ${city}, ${country}`
-  //   : "Location unavailable"
-
-  // const cookieStore = cookies()
-  // const lastVisitor = cookieStore.get('last-visitor')?.value
-
-  // const cookieStore = await cookies()
-  // const lastVisitor = cookieStore.get('last-visitor')?.value
-
-  // const label = lastVisitor
-  //   ? `Last visit from ${lastVisitor}`
-  //   : 'Location unavailable'
-
-  // const h = headers()
-  // const lastVisitor = h.get('x-last-visitor')
-
-  // const label = lastVisitor
-  //   ? `Last visit from ${lastVisitor}`
-  //   : 'Location unavailable'
-
-  // const cookieStore = cookies()  // ✅ Correct
-  // const lastVisitor = cookieStore.get("last-visitor")?.value
-
-  // const label = lastVisitor
-  //   ? `Last visit from ${lastVisitor}`
-  //   : "Location unavailable"
-
-  // const h = headers();
-  // const cookieHeader = h.get("cookie") || "";
-  // const cookiesMap = Object.fromEntries(cookieHeader.split("; ").map(c => {
-  //   const [key, ...v] = c.split("=");
-  //   return [key, v.join("=")];
-  // }));
-
-  // const lastVisitor = cookiesMap["last-visitor"];
-
-  // const label = lastVisitor
-  //   ? `Last visit from ${decodeURIComponent(lastVisitor)}`
-  //   : "Location unavailable";
-
-  // const cookieStore = cookies(); // ✅ sync usage
-  // const lastVisitor = cookieStore.get("last-visitor")?.value;
-
-  // const label = lastVisitor
-  //   ? `Last visit from ${decodeURIComponent(lastVisitor)}`
-  //   : "Location unavailable";
-
-  const lastVisitor = getLastVisitor();
-
-  const label = lastVisitor
-    ? `Last visit from ${decodeURIComponent(lastVisitor)}`
-    : "Location unavailable";
-
 
   return (
     <>
@@ -139,10 +72,11 @@ export default function Home() {
           </div>
           <div className={styles.detailsContainer}>
             <div className={styles.mottoBox}>
-              {/* <VisitorLocation /> */}
-              {label}
+              Designer Portfolio
             </div>
-            <div className={styles.mottoBox}>Time</div>
+            <div className={styles.mottoBox}>
+              <LiveTime />
+            </div>
           </div>
         </div>
       </div>
