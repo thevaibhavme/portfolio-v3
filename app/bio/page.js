@@ -1,5 +1,6 @@
 import styles from "./bio.module.css"
 import Image from "next/image"
+import ProfilePhoto from "@/public/profilephoto/profilephoto.png";
 import { Experience } from "../../Components/Experience/experience"
 import { ExperienceData } from "../../Components/Experience/experienceData"
 import Link from "next/link"
@@ -19,15 +20,15 @@ export default function Bio() {
                 <div className={styles.headerContainer}>
                     <div className={styles.profileContainer}>
                         <Image
-                            src="/profilephoto/profilephoto.png"
-                            width={56}
-                            height={56}
+                            src={ProfilePhoto}
                             alt="profilephoto"
-                            style={{ borderRadius: "50%" }}
-                            loading='lazy'
+                            style={{ 
+                                width: "56px",
+                                height: "56px",
+                                borderRadius: "50%" ,
+                            }}
                             draggable={false}
                             placeholder="blur"
-                            blurDataURL="..."
                         />
                         <div className={styles.profileInfo}>
                             <div className={styles.name}>Vaibhav Aggarwal</div>

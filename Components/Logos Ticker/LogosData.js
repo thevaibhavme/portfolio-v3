@@ -1,19 +1,19 @@
+import MAKEMYTRIP from "@/public/companyLogos/makemytrip.svg";
+import SCALER from "@/public/companyLogos/scaler.svg";
+import ATTENTIVE from "@/public/companyLogos/attentive.svg";
+
 const logosData = [
     {
         name: "MakeMyTrip",
-        url: "./companyLogos/makemytrip.svg",
+        url: MAKEMYTRIP,
     },
     {
         name: "Scaler",
-        url: "./companyLogos/scaler.svg",
+        url: SCALER,
     },
-    // {
-    //     name: "redBus",
-    //     url: "./companyLogos/redBus.svg",
-    // },
     {
         name: "Attentive",
-        url: "./companyLogos/attentive.svg",
+        url: ATTENTIVE,
     },
 ]
 

@@ -1,5 +1,6 @@
 import styles from "./logosTicker.module.css"
 import logosData from "./LogosData"
+import Image from "next/image"
 
 export default function LogosTicker() {
 
@@ -12,12 +13,12 @@ export default function LogosTicker() {
                         return (
                             <div className={styles.logoWrapper} key={i.name}>
                                 <li className={styles.logoListItem}>
-                                    <img
+                                    <Image
                                         key={i.name}
                                         src={i.url}
                                         alt={i.name}
                                         className={styles.logo}
-                                        // style={{ filter: theme === "light" ? "invert(1)" : "invert(0)" }}
+                                        // placeholder="blur"
                                     />
                                 </li>
                             </div>
@@ -30,12 +31,12 @@ export default function LogosTicker() {
                     logosData.map((i) => {
                         return (
                             <div className={styles.logoWrapper} key={i.name}>
-                                <img
+                                <Image
                                     key={i.name}
                                     src={i.url}
                                     alt={i.name}
                                     className={styles.logo}
-                                    // style={{ filter: theme === "light" ? "invert(1)" : "invert(0)" }}
+                                    // placeholder="blur"
                                 />
                             </div>
                         )
