@@ -1,6 +1,6 @@
 import styles from "./projects.module.css"
 import { ProjectCard } from "@/Components/Project Card/projectCard";
-import { ProjectData } from "./projectData";
+import { ProjectData } from "./data/projectData";
 
 export const metadata = {
     title: "thevaibhav's projects",

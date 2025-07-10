@@ -1,4 +1,3 @@
-"use client";
 import styles from "./labCard.module.css"
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -46,8 +45,8 @@ export function LabCard({
                 <Image
                     src={src}
                     alt={title}
-                    width={332}
-                    height={260}
+                    // width={332}
+                    // height={260}
                     sizes="100vw"
                     style={{
                         width: "100%",

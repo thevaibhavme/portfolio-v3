@@ -12,7 +12,9 @@ export default function Home() {
     <>
       <div className={styles.parentContainer}>
         <div className={styles.mainContainer}>
-          <div className={styles.nameContainer}>Vaibhav Aggarwal</div>
+          <div className={styles.nameContainer}>
+            Vaibhav Aggarwal
+          </div>
           <div className={styles.mottoContainer}>
             <div className={`${styles.mottoBox} ${styles.toBeHidden}`}>Keep</div>
             <div className={`${styles.mottoBox} ${styles.toBeHidden}`}>Building</div>
@@ -71,10 +73,10 @@ export default function Home() {
             </Link>
           </div>
           <div className={styles.detailsContainer}>
-            <div className={styles.mottoBox}>
+            <div className={styles.detailBox}>
               Designer Portfolio
             </div>
-            <div className={styles.mottoBox}>
+            <div className={styles.detailBox}>
               <LiveTime />
             </div>
           </div>
