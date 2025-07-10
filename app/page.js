@@ -33,12 +33,19 @@ export default async function Home() {
   //   ? `Last visit from ${lastVisitor}`
   //   : 'Location unavailable'
 
-  const h = headers()
-  const lastVisitor = h.get('x-last-visitor')
+  // const h = headers()
+  // const lastVisitor = h.get('x-last-visitor')
+
+  // const label = lastVisitor
+  //   ? `Last visit from ${lastVisitor}`
+  //   : 'Location unavailable'
+
+  const cookieStore = await cookies()
+  const lastVisitor = cookieStore.get("last-visitor")?.value
 
   const label = lastVisitor
     ? `Last visit from ${lastVisitor}`
-    : 'Location unavailable'
+    : "Location unavailable"
 
   return (
     <>

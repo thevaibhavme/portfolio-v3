@@ -1,37 +1,28 @@
 // middleware.js
-import { NextResponse } from 'next/server'
+import { NextResponse } from "next/server"
 
 export const config = {
-    matcher: '/', // apply only on homepage
+  matcher: "/", // run only on home
 }
 
 export function middleware(request) {
+  const geo = request.geo || {}
+  const currentVisitor = geo.city && geo.country
+    ? `${geo.city}, ${geo.country}`
+    : null
 
-    console.log('[Middleware] geo:', request.geo)   // <--- ADD THIS
+  const response = NextResponse.next()
 
-    const geo = request.geo
-    const city = geo?.city || ''
-    const country = geo?.country || ''
+  // Get current cookie (last visitor info)
+  const lastVisitor = request.cookies.get("last-visitor")?.value
 
-    // Build a label like "Delhi, India"
-    const visitorLocation = city && country ? `${city}, ${country}` : null
+  // Set the new visitor's location for the next visitor
+  if (currentVisitor) {
+    response.cookies.set("last-visitor", currentVisitor, {
+      path: "/",
+      maxAge: 60 * 60 * 24, // 1 day
+    })
+  }
 
-    const response = NextResponse.next()
-
-    // Step 1: Read the current last-visitor cookie
-    const previousVisitor = request.cookies.get('last-visitor')?.value
-
-    // Step 2: Set the new visitor's location into the cookie
-    if (visitorLocation) {
-        response.cookies.set('last-visitor', visitorLocation, {
-            path: '/',
-        })
-    }
-
-    // Step 3: Store the previous visitor's location as a header
-    if (previousVisitor) {
-        response.headers.set('x-last-visitor', previousVisitor)
-    }
-
-    return response
+  return response
 }
