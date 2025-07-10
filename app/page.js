@@ -6,12 +6,13 @@ import GlowingIcons from "@/app/images/glowingicons.png";
 import Lines from "@/app/images/lines.png";
 import { cookies } from "next/headers";
 import { headers } from "next/headers";
+import { getLastVisitor } from "@/lib/getLastVisitor";
 
 // export const dynamic = "force-dynamic"  // always read fresh headers
 // export const dynamic = 'force-dynamic'  // ensures fresh cookies per request
 export const dynamic = 'force-dynamic'
 
-export default async function Home() {
+export default function Home() {
 
   // // 1. grab the Vercel-provided geo headers
   // const h = headers()
@@ -40,12 +41,39 @@ export default async function Home() {
   //   ? `Last visit from ${lastVisitor}`
   //   : 'Location unavailable'
 
-  const cookieStore = await cookies()
-  const lastVisitor = cookieStore.get("last-visitor")?.value
+  // const cookieStore = cookies()  // ✅ Correct
+  // const lastVisitor = cookieStore.get("last-visitor")?.value
+
+  // const label = lastVisitor
+  //   ? `Last visit from ${lastVisitor}`
+  //   : "Location unavailable"
+
+  // const h = headers();
+  // const cookieHeader = h.get("cookie") || "";
+  // const cookiesMap = Object.fromEntries(cookieHeader.split("; ").map(c => {
+  //   const [key, ...v] = c.split("=");
+  //   return [key, v.join("=")];
+  // }));
+
+  // const lastVisitor = cookiesMap["last-visitor"];
+
+  // const label = lastVisitor
+  //   ? `Last visit from ${decodeURIComponent(lastVisitor)}`
+  //   : "Location unavailable";
+
+  // const cookieStore = cookies(); // ✅ sync usage
+  // const lastVisitor = cookieStore.get("last-visitor")?.value;
+
+  // const label = lastVisitor
+  //   ? `Last visit from ${decodeURIComponent(lastVisitor)}`
+  //   : "Location unavailable";
+
+  const lastVisitor = getLastVisitor();
 
   const label = lastVisitor
-    ? `Last visit from ${lastVisitor}`
-    : "Location unavailable"
+    ? `Last visit from ${decodeURIComponent(lastVisitor)}`
+    : "Location unavailable";
+
 
   return (
     <>
