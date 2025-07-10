@@ -7,19 +7,30 @@ import Lines from "@/app/images/lines.png";
 import { cookies } from "next/headers";
 import { headers } from "next/headers";
 
-export const dynamic = "force-dynamic"  // always read fresh headers
+// export const dynamic = "force-dynamic"  // always read fresh headers
+export const dynamic = 'force-dynamic'  // ensures fresh cookies per request
 
 export default async function Home() {
 
-  // 1. grab the Vercel-provided geo headers
-  const h = headers()
-  const city    = h.get("x-vercel-ip-city")
-  const country = h.get("x-vercel-ip-country")
+  // // 1. grab the Vercel-provided geo headers
+  // const h = headers()
+  // const city    = h.get("x-vercel-ip-city")
+  // const country = h.get("x-vercel-ip-country")
 
-  // 2. build your label
-  const label = city
-    ? `Last visit from ${city}, ${country}`
-    : "Location unavailable"
+  // // 2. build your label
+  // const label = city
+  //   ? `Last visit from ${city}, ${country}`
+  //   : "Location unavailable"
+
+  // const cookieStore = cookies()
+  // const lastVisitor = cookieStore.get('last-visitor')?.value
+
+  const cookieStore = await cookies()
+  const lastVisitor = cookieStore.get('last-visitor')?.value
+
+  const label = lastVisitor
+    ? `Last visit from ${lastVisitor}`
+    : 'Location unavailable'
 
   return (
     <>
