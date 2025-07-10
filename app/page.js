@@ -8,7 +8,8 @@ import { cookies } from "next/headers";
 import { headers } from "next/headers";
 
 // export const dynamic = "force-dynamic"  // always read fresh headers
-export const dynamic = 'force-dynamic'  // ensures fresh cookies per request
+// export const dynamic = 'force-dynamic'  // ensures fresh cookies per request
+export const dynamic = 'force-dynamic'
 
 export default async function Home() {
 
@@ -25,8 +26,15 @@ export default async function Home() {
   // const cookieStore = cookies()
   // const lastVisitor = cookieStore.get('last-visitor')?.value
 
-  const cookieStore = await cookies()
-  const lastVisitor = cookieStore.get('last-visitor')?.value
+  // const cookieStore = await cookies()
+  // const lastVisitor = cookieStore.get('last-visitor')?.value
+
+  // const label = lastVisitor
+  //   ? `Last visit from ${lastVisitor}`
+  //   : 'Location unavailable'
+
+  const h = headers()
+  const lastVisitor = h.get('x-last-visitor')
 
   const label = lastVisitor
     ? `Last visit from ${lastVisitor}`
