@@ -48,7 +48,7 @@
     border-radius: 16px;
     animation: blogCardAnimation 0.6s ease-out forwards;
     opacity: 0;
-    animation-delay: calc(var(--index) * 0.15s);
+    animation-delay: calc(var(--index) * 0.12s);
 }
 
 .blogListItem:hover {
@@ -61,7 +61,7 @@
     font-family: Figtree;
     font-size: 17px;
     font-style: normal;
-    font-weight: 510;
+    font-weight: 590;
     line-height: 27px;
 }
 

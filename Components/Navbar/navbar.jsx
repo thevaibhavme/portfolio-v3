@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export function Navbar() {
 
@@ -12,33 +12,48 @@ export function Navbar() {
     const { theme, resolvedTheme, setTheme } = useTheme();
 
     const [mounted, setMounted] = useState(false);
+    const audioRef = useRef(null);
+
 
     useEffect(() => {
         setMounted(true)
+        audioRef.current = new Audio('/switchsound.mp3');
     }, [])
 
     if (!mounted) {
         return null
     }
 
-    const checkTheme = () => {
-        if (resolvedTheme === "light") {
-            setTheme("dark");
-        }
-        else if (resolvedTheme === "dark") {
-            setTheme("light");
-        }
-    }
+    // const checkTheme = () => {
+    //     if (resolvedTheme === "light") {
+    //         setTheme("dark");
+    //     }
+    //     else if (resolvedTheme === "dark") {
+    //         setTheme("light");
+    //     }
+    // }
 
     const current = theme;
 
     const cycleTheme = () => {
+
+        // Play the sound
+        if (audioRef.current) {
+            audioRef.current.currentTime = 0; // Reset to beginning
+            audioRef.current.play().catch(error => {
+                console.log('Audio play failed:', error);
+            });
+        }
+
         switch (current) {
             case 'light':
                 setTheme('dark');
                 break;
+            // case 'dark':
+            //     setTheme('system');
+            //     break;
             case 'dark':
-                setTheme('system');
+                setTheme('light');
                 break;
             default:
                 setTheme('light');
@@ -65,9 +80,12 @@ export function Navbar() {
                         onClick={cycleTheme}
                     >
                         {/* show what the user has picked, or the resolved theme? */}
-                        {current === 'system'
-                            ? `system`
-                            : current}
+                        {/* {current === 'system'
+                            ? `System`
+                            : current} */}
+                        {current === 'light'
+                            ? `dark`
+                            : `light`}
                     </button>
                 </motion.div>
                 {/* <motion.div

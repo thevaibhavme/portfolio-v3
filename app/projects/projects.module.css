@@ -27,7 +27,7 @@
 }
 
 .heading {
-    animation: titleAnimation 0.8s ease-out;
+    animation: titleAnimation 0.6s ease-out;
 }
 
 @keyframes titleAnimation {
@@ -55,7 +55,7 @@
 
 .projectCard {
     opacity: 0;
-    animation: projectCardAnimation 0.8s ease-out forwards;
+    animation: projectCardAnimation 0.6s ease-out forwards;
     animation-delay: calc(var(--index) * 0.4s);
 }
 
