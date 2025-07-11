@@ -1,4 +1,4 @@
-import CoverImage from "@/app/blogs/mmtinternship/images/coverimage.png"
+import CoverImage from "@/app/blogs/mmtinternship/images/coverimage.webp"
 import { Hyperlink } from "@/Components/Link/hyperlink";
 import { BlogHeading, BlogParagraph, BlogParagraphEmphasis, BlogSubHeading, BlogImage, BlogParentContainer, EndingNote } from "@/Components/Blogs/blogsComps";
 

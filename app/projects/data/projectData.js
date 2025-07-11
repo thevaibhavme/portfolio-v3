@@ -1,7 +1,7 @@
-import MMTEMI from "@/app/projects/data/images/mmtemi.png"
-import MMTPP from "@/app/projects/data/images/mmtpp.png"
-import REDBUSREDESIGN from "@/app/projects/data/images/redbusredesign.png"
-import RYDE from "@/app/projects/data/images/rYde.png"
+import MMTEMI from "@/app/projects/data/images/mmtemi.webp"
+import MMTPP from "@/app/projects/data/images/mmtpp.webp"
+import REDBUSREDESIGN from "@/app/projects/data/images/redbusredesign.webp"
+import RYDE from "@/app/projects/data/images/rYde.webp"
 
 export const ProjectData = [
     {

@@ -1,6 +1,6 @@
 import styles from "./bio.module.css"
 import Image from "next/image"
-import ProfilePhoto from "@/public/profilephoto/profilephoto.png";
+import ProfilePhoto from "@/public/profilephoto/profilephoto.webp";
 import { Experience } from "../../Components/Experience/experience"
 import { ExperienceData } from "../../Components/Experience/experienceData"
 import Link from "next/link"
