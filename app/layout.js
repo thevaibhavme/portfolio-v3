@@ -13,6 +13,7 @@ const figtree = Figtree({
 
 export const metadata = {
   title: "thevaibhav’s home",
+  description: 'Keep Building Things',
 };
 
 
